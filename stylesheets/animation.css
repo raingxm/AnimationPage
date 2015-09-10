@@ -1,0 +1,16 @@
+/* for global animation */
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.brand--top {
+  animation: fadein 1s;
+}
