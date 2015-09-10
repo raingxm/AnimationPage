@@ -11,6 +11,15 @@
   }
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
 .brand--top {
-  animation: fadein 1s;
+  animation: fadein .5s, slideDown .5s;
 }
