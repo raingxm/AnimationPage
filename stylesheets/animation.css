@@ -1,6 +1,6 @@
 /* for global animation */
 
-@keyframes fadein {
+@keyframes fadeIn {
   from {
     opacity: 0;
     visibility: hidden;
@@ -29,8 +29,12 @@
   }
 }
 
+@keyframes zoomIn {
+
+}
+
 .index .brand--top {
-  animation: fadein .5s, slideDown .5s;
+  animation: fadeIn .5s, slideDown .5s;
 }
 
 .index .main {
@@ -43,4 +47,27 @@
 
 .answer-link {
   transition: all .5s;
+}
+
+.answer-link.is-selected {
+  transform: scale(1.025);
+  transition: scale .3s;
+}
+
+.character {
+  visibility: hidden;
+  opacity: 0;
+  animation: fadeIn .5s forwards;
+}
+
+.character-description {
+  visibility: hidden;
+  opacity: 0;
+  animation: fadeIn .5s .5s forwards;
+}
+
+.share {
+  visibility: hidden;
+  opacity: 0;
+  animation: fadeIn .2s 1s forwards;
 }
