@@ -42,6 +42,28 @@
   }
 }
 
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 .index .brand--top {
   animation: fadeIn .5s, slideDown .5s;
 }
@@ -66,7 +88,7 @@
 .character {
   visibility: hidden;
   opacity: 0;
-  animation: fadeIn .5s forwards;
+  animation: fadeIn .5s forwards, tada 1s;
 }
 
 .character-description {
@@ -77,4 +99,8 @@
 
 .share {
   animation: zoomIn .2s 1s both;
+}
+
+.brand--bottom {
+  transition: all .5s;
 }
