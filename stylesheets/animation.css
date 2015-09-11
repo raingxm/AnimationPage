@@ -30,7 +30,16 @@
 }
 
 @keyframes zoomIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale3d(.3, .3, .3);
+  }
 
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .index .brand--top {
@@ -63,11 +72,9 @@
 .character-description {
   visibility: hidden;
   opacity: 0;
-  animation: fadeIn .5s .5s forwards;
+  animation: fadeIn 1s .5s forwards;
 }
 
 .share {
-  visibility: hidden;
-  opacity: 0;
-  animation: fadeIn .2s 1s forwards;
+  animation: zoomIn .2s 1s both;
 }
